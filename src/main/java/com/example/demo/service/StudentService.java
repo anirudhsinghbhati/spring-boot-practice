@@ -23,4 +23,8 @@ public class StudentService {
     public void addStudent(Student student) {
         repository.addStudent(student);
     }
+
+    public Student getStudentById(int id){
+        return repository.getStudentById(id);
+    }
 }
