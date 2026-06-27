@@ -25,8 +25,6 @@ public class StudentRepository {
             if(students.get(i).getId() == id)
                 return students.get(i);
         }
-        throw new StudentNotFoundException(
-            "Student with id " + id + " not found"
-        );
+        throw new StudentNotFoundException("Student with id " + id + " not found");
     }
 }

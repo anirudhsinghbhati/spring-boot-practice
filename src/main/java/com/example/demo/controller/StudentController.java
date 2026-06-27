@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import jakarta.validation.Valid;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class StudentController {
 
     @PostMapping("/students")
     @ResponseStatus(HttpStatus.CREATED)
-    public void addStudent(@RequestBody Student student){
+    public void addStudent(@Valid @RequestBody Student student){
         studentService.addStudent(student);
     }
 
