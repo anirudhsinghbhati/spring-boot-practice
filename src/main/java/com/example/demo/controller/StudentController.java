@@ -28,8 +28,8 @@ public class StudentController {
 
     @PostMapping("/students")
     @ResponseStatus(HttpStatus.CREATED)
-    public Student createStudent(@RequestBody Student student){
-        return student;
+    public void addStudent(@RequestBody Student student){
+        studentService.addStudent(student);
     }
 
 }
